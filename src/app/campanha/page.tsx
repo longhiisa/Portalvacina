@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Container, Typography, Box, Button, Stack } from "@mui/material";
 import { Vaccines, CalendarMonth, Phone } from "@mui/icons-material";
+import React from "react";
 
 export default function HomeCampanha() {
   return (

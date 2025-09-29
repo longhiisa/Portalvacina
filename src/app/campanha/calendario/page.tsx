@@ -15,18 +15,9 @@ import { LocationOn, CalendarToday } from "@mui/icons-material";
 
 export default function Calendario() {
   const eventos = [
-    {
-      local: "Posto Central",
-      periodo: "01/10 a 05/10",
-    },
-    {
-      local: "Escola Municipal",
-      periodo: "06/10 a 10/10",
-    },
-    {
-      local: "UBS Bairro Novo",
-      periodo: "11/10 a 15/10",
-    },
+    { local: "Posto Central", periodo: "01/10 a 05/10" },
+    { local: "Escola Municipal", periodo: "06/10 a 10/10" },
+    { local: "UBS Bairro Novo", periodo: "11/10 a 15/10" },
   ];
 
   return (
@@ -51,23 +42,12 @@ export default function Calendario() {
           >
             📅 Calendário de Vacinação
           </Typography>
-          <Typography
-            variant="h5"
-            sx={{
-              color: "white",
-              opacity: 0.95,
-            }}
-          >
+          <Typography variant="h5" sx={{ color: "white", opacity: 0.95 }}>
             Confira as datas e locais da campanha:
           </Typography>
         </Box>
 
-        <Card
-          sx={{
-            boxShadow: 6,
-            borderRadius: 3,
-          }}
-        >
+        <Card sx={{ boxShadow: 6, borderRadius: 3 }}>
           <CardContent>
             <List>
               {eventos.map((evento, index) => (

@@ -10,7 +10,15 @@ export default function Navbar() {
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           {/* Logo */}
-          <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "12px" }}>
+          <Link
+            href="/"
+            style={{
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+            }}
+          >
             <Vaccines sx={{ fontSize: 40, color: "white" }} />
             <Typography
               variant="h5"

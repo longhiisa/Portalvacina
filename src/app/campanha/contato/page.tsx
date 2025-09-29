@@ -12,6 +12,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import { Phone, Email, LocationOn } from "@mui/icons-material";
+import React from "react";
 
 export default function Contato() {
   const contatos = [

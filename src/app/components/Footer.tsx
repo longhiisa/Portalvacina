@@ -2,6 +2,8 @@
 
 import { Box, Container, Typography } from "@mui/material";
 import { Favorite } from "@mui/icons-material";
+import React from "react";
+
 
 export default function Footer() {
   return (

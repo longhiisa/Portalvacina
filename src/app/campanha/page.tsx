@@ -69,7 +69,7 @@ export default function HomeCampanha() {
               boxShadow: 3,
             }}
           >
-            Vacinas
+            Ver Vacinas
           </Button>
 
           <Button
@@ -94,7 +94,7 @@ export default function HomeCampanha() {
               boxShadow: 3,
             }}
           >
-            Calendário
+            Ver Calendário
           </Button>
 
           <Button
@@ -119,7 +119,7 @@ export default function HomeCampanha() {
               boxShadow: 3,
             }}
           >
-            Contato
+            Fale Conosco
           </Button>
         </Stack>
       </Container>

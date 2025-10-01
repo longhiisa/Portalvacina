@@ -1,70 +1,34 @@
 "use client";
 
-import Link from "next/link";
-import { Container, Typography, Box, Button, Stack } from "@mui/material";
+import { Box, Container, Typography, Stack, Button } from "@mui/material";
 import { Vaccines, CalendarMonth, Phone } from "@mui/icons-material";
+import Link from "next/link";
 
-export default function HomeCampanha() {
+export default function HomePage() {
   return (
-    <Box
-      sx={{
-        minHeight: "calc(100vh - 200px)",
-        background: "linear-gradient(135deg, #3b82f6 0%, #60a5fa 50%, #22d3ee 100%)",
-        py: 8,
-        display: "flex",
-        alignItems: "center",
-      }}
-    >
-      <Container maxWidth="lg">
-        <Box textAlign="center" mb={6}>
-          <Typography
-            variant="h2"
-            component="h1"
-            sx={{
-              fontWeight: "bold",
-              color: "white",
-              mb: 2,
-              textShadow: "0 4px 6px rgba(0,0,0,0.2)",
-            }}
-          >
-            Campanha Nacional de Vacinação
-          </Typography>
-          <Typography
-            variant="h5"
-            sx={{
-              color: "white",
-              opacity: 0.95,
-              maxWidth: "800px",
-              mx: "auto",
-            }}
-          >
-            Proteja-se e proteja quem você ama. Vacinar é um ato de cuidado coletivo!
-          </Typography>
-        </Box>
+    <Box sx={{ width: "100%", minHeight: "calc(100vh - 64px)", backgroundColor: "#7c3aed", py: 12 }}>
+      <Container sx={{ textAlign: "center" }}>
+        <Typography variant="h2" sx={{ fontWeight: 900, color: "white", mb: 2 }}>
+          Campanha Nacional de Vacinação
+        </Typography>
+        <Typography variant="h5" sx={{ color: "white", mb: 6 }}>
+          Proteja-se e proteja quem você ama. Vacinar é um ato de cuidado coletivo!
+        </Typography>
 
-        <Stack
-          direction={{ xs: "column", md: "row" }}
-          spacing={3}
-          justifyContent="center"
-        >
+        <Stack direction={{ xs: "column", md: "row" }} spacing={3} justifyContent="center">
           <Button
             component={Link}
-            href="/campanha/vacinas"
+            href="/vacinas"
             variant="contained"
             size="large"
             startIcon={<Vaccines />}
             sx={{
               bgcolor: "white",
-              color: "#1e3a8a",
+              color: "#4c1d95",
               py: 2,
               px: 4,
-              fontSize: "1.1rem",
               fontWeight: "bold",
-              "&:hover": {
-                bgcolor: "#1e3a8a",
-                color: "white",
-                transform: "translateY(-5px)",
-              },
+              "&:hover": { bgcolor: "#4c1d95", color: "white", transform: "translateY(-5px)" },
               transition: "all 0.3s ease",
               boxShadow: 3,
             }}
@@ -74,22 +38,17 @@ export default function HomeCampanha() {
 
           <Button
             component={Link}
-            href="/campanha/calendario"
+            href="/calendario"
             variant="contained"
             size="large"
             startIcon={<CalendarMonth />}
             sx={{
               bgcolor: "white",
-              color: "#1e3a8a",
+              color: "#4c1d95",
               py: 2,
               px: 4,
-              fontSize: "1.1rem",
               fontWeight: "bold",
-              "&:hover": {
-                bgcolor: "#1e3a8a",
-                color: "white",
-                transform: "translateY(-5px)",
-              },
+              "&:hover": { bgcolor: "#4c1d95", color: "white", transform: "translateY(-5px)" },
               transition: "all 0.3s ease",
               boxShadow: 3,
             }}
@@ -99,22 +58,17 @@ export default function HomeCampanha() {
 
           <Button
             component={Link}
-            href="/campanha/contato"
+            href="/contato"
             variant="contained"
             size="large"
             startIcon={<Phone />}
             sx={{
               bgcolor: "white",
-              color: "#1e3a8a",
+              color: "#4c1d95",
               py: 2,
               px: 4,
-              fontSize: "1.1rem",
               fontWeight: "bold",
-              "&:hover": {
-                bgcolor: "#1e3a8a",
-                color: "white",
-                transform: "translateY(-5px)",
-              },
+              "&:hover": { bgcolor: "#4c1d95", color: "white", transform: "translateY(-5px)" },
               transition: "all 0.3s ease",
               boxShadow: 3,
             }}

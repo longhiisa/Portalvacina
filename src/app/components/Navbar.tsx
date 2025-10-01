@@ -1,98 +1,59 @@
 "use client";
 
+import { AppBar, Toolbar, Typography, Stack } from "@mui/material";
 import Link from "next/link";
-import { AppBar, Toolbar, Typography, Button, Container, Box } from "@mui/material";
-import { Vaccines } from "@mui/icons-material";
 
 export default function Navbar() {
   return (
-    <AppBar position="sticky" sx={{ bgcolor: "#1e40af", boxShadow: 3 }}>
-      <Container maxWidth="lg">
-        <Toolbar disableGutters>
-          {/* Logo */}
-          <Link
-            href="/"
-            style={{
-              textDecoration: "none",
-              display: "flex",
-              alignItems: "center",
-              gap: "12px",
-            }}
+    <AppBar position="static" sx={{ backgroundColor: "#4c1d95" }}>
+      <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+        {/* Nome do site como link para Home */}
+        <Typography
+          variant="h6"
+          sx={{
+            fontWeight: 700,
+            color: "white",       // mantém branco
+            textDecoration: "none", // remove sublinhado
+            cursor: "pointer",
+          }}
+          component={Link}
+          href="/"
+        >
+          Portal Vacina
+        </Typography>
+
+        {/* Links de navegação */}
+        <Stack direction="row" spacing={2}>
+          <Typography
+            component={Link}
+            href="/calendario"
+            sx={{ color: "white", textDecoration: "none", cursor: "pointer" }}
           >
-            <Vaccines sx={{ fontSize: 40, color: "white" }} />
-            <Typography
-              variant="h5"
-              component="h1"
-              sx={{
-                fontWeight: "bold",
-                color: "white",
-                display: { xs: "none", md: "block" },
-              }}
-            >
-              Portal da Vacinação
-            </Typography>
-          </Link>
-
-          {/* Espaçador */}
-          <Box sx={{ flexGrow: 1 }} />
-
-          {/* Menu */}
-          <Box sx={{ display: "flex", gap: 2 }}>
-            <Button
-              component={Link}
-              href="/campanha"
-              sx={{
-                color: "white",
-                fontWeight: "bold",
-                "&:hover": {
-                  bgcolor: "rgba(255, 255, 255, 0.1)",
-                },
-              }}
-            >
-              Campanha
-            </Button>
-            <Button
-              component={Link}
-              href="/campanha/vacinas"
-              sx={{
-                color: "white",
-                fontWeight: "bold",
-                "&:hover": {
-                  bgcolor: "rgba(255, 255, 255, 0.1)",
-                },
-              }}
-            >
-              Vacinas
-            </Button>
-            <Button
-              component={Link}
-              href="/campanha/calendario"
-              sx={{
-                color: "white",
-                fontWeight: "bold",
-                "&:hover": {
-                  bgcolor: "rgba(255, 255, 255, 0.1)",
-                },
-              }}
-            >
-              Calendário
-            </Button>
-            <Button
-              component={Link}
-              href="/campanha/contato"
-              sx={{
-                color: "white",
-                fontWeight: "bold",
-                "&:hover": {
-                  bgcolor: "rgba(255, 255, 255, 0.1)",
-                },
-              }}
-            >
-              Contato
-            </Button>
-          </Box>
-        </Toolbar>
-      </Container>
+            Calendário
+          </Typography>
+          <Typography
+            component={Link}
+            href="/vacinas"
+            sx={{ color: "white", textDecoration: "none", cursor: "pointer" }}
+          >
+            Vacinas
+          </Typography>
+          <Typography
+            component={Link}
+            href="/informativos"
+            sx={{ color: "white", textDecoration: "none", cursor: "pointer" }}
+          >
+            Informativos
+          </Typography>
+          <Typography
+            component={Link}
+            href="/contato"
+            sx={{ color: "white", textDecoration: "none", cursor: "pointer" }}
+          >
+            Contato
+          </Typography>
+        </Stack>
+      </Toolbar>
     </AppBar>
   );
 }

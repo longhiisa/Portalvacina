@@ -10,46 +10,30 @@ export default function Navbar() {
         {/* Nome do site como link para Home */}
         <Typography
           variant="h6"
-          sx={{
-            fontWeight: 700,
-            color: "white",       // mantém branco
-            textDecoration: "none", // remove sublinhado
-            cursor: "pointer",
-          }}
           component={Link}
           href="/"
+          sx={{
+            fontWeight: 700,
+            color: "white",
+            textDecoration: "none",
+            cursor: "pointer",
+          }}
         >
           Portal Vacina
         </Typography>
 
         {/* Links de navegação */}
-        <Stack direction="row" spacing={2}>
-          <Typography
-            component={Link}
-            href="/calendario"
-            sx={{ color: "white", textDecoration: "none", cursor: "pointer" }}
-          >
+        <Stack direction="row" spacing={3}>
+          <Typography component={Link} href="/calendario" sx={{ color: "white", textDecoration: "none", cursor: "pointer" }}>
             Calendário
           </Typography>
-          <Typography
-            component={Link}
-            href="/vacinas"
-            sx={{ color: "white", textDecoration: "none", cursor: "pointer" }}
-          >
+          <Typography component={Link} href="/vacinas" sx={{ color: "white", textDecoration: "none", cursor: "pointer" }}>
             Vacinas
           </Typography>
-          <Typography
-            component={Link}
-            href="/informativos"
-            sx={{ color: "white", textDecoration: "none", cursor: "pointer" }}
-          >
+          <Typography component={Link} href="/informativos" sx={{ color: "white", textDecoration: "none", cursor: "pointer" }}>
             Informativos
           </Typography>
-          <Typography
-            component={Link}
-            href="/contato"
-            sx={{ color: "white", textDecoration: "none", cursor: "pointer" }}
-          >
+          <Typography component={Link} href="/contato" sx={{ color: "white", textDecoration: "none", cursor: "pointer" }}>
             Contato
           </Typography>
         </Stack>

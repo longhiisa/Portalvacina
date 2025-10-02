@@ -10,9 +10,19 @@ const informativos = [
 
 export default function Informativos() {
   return (
-    <Box sx={{ width: "100%", py: 12, background: "linear-gradient(135deg, #5b21b6 0%, #7c3aed 50%, #a78bfa 100%)" }}>
+    <Box
+      sx={{
+        width: "100%",
+        py: 12,
+        backgroundImage: "linear-gradient(135deg, #5b21b6 0%, #7c3aed 50%, #a78bfa 100%)",
+      }}
+    >
       <Container>
-        <Typography variant="h3" color="white" fontWeight={900} mb={6} textAlign="center">
+        <Typography
+          variant="h3"
+          color="white"
+          sx={{ fontWeight: 900, mb: 6, textAlign: "center" }}
+        >
           📚 Informativos sobre Vacinação
         </Typography>
 
@@ -21,7 +31,10 @@ export default function Informativos() {
             <Grid item xs={12} md={4} key={index}>
               <Card sx={{ borderRadius: 3, boxShadow: 6 }}>
                 <CardContent>
-                  <Typography variant="h6" fontWeight={700} mb={2} color="primary.main">
+                  <Typography
+                    variant="h6"
+                    sx={{ fontWeight: 700, mb: 2, color: "primary.main" }}
+                  >
                     {info.titulo}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">

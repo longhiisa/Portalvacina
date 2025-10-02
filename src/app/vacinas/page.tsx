@@ -13,9 +13,9 @@ const vacinas = [
 
 export default function Vacinas() {
   return (
-    <Box sx={{ width: "100%", py: 12, background: "linear-gradient(135deg, #5b21b6 0%, #7c3aed 50%, #a78bfa 100%)" }}>
+    <Box sx={{ py: 12 }}>
       <Container>
-        <Typography variant="h3" color="white" fontWeight={900} mb={6} textAlign="center">
+        <Typography variant="h3" sx={{ fontWeight: 900, color: "white", mb: 6, textAlign: "center" }}>
           💉 Vacinas Disponíveis
         </Typography>
 

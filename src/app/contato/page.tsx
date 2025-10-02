@@ -5,9 +5,9 @@ import { Mail, Phone } from "@mui/icons-material";
 
 export default function Contato() {
   return (
-    <Box sx={{ width: "100%", py: 12, background: "linear-gradient(135deg, #5b21b6 0%, #7c3aed 50%, #a78bfa 100%)" }}>
+    <Box sx={{ py: 12 }}>
       <Container maxWidth="sm" sx={{ textAlign: "center" }}>
-        <Typography variant="h3" color="white" fontWeight={900} mb={4}>
+        <Typography variant="h3" sx={{ fontWeight: 900, color: "white", mb: 4 }}>
           📞 Contato
         </Typography>
 
@@ -25,7 +25,7 @@ export default function Contato() {
           <TextField label="Email" variant="outlined" fullWidth />
           <TextField label="Mensagem" variant="outlined" fullWidth multiline rows={4} />
 
-          <Button variant="contained" size="large">
+          <Button variant="contained" size="large" sx={{ mt: 2, bgcolor: "white", color: "#4c1d95", "&:hover": { bgcolor: "#4c1d95", color: "white" } }}>
             Enviar
           </Button>
         </Stack>

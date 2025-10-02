@@ -1,17 +1,7 @@
 "use client";
 
 import { Box, Container, Typography, Stack, Paper } from "@mui/material";
-import {
-  Place as MapPin,
-  CalendarMonth as Calendar,
-  AccessTime as Clock,
-  InfoOutlined as Info,
-  CheckCircle,
-  Mail,
-  Phone
-} from "@mui/icons-material";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import { Place as MapPin, CalendarMonth as Calendar, AccessTime as Clock, CheckCircle, Mail, Phone } from "@mui/icons-material";
 
 export default function Calendario() {
   const eventos = [
@@ -22,10 +12,8 @@ export default function Calendario() {
   ];
 
   return (
-    <Box sx={{ backgroundColor: "#7c3aed", minHeight: "100vh" }}>
-      <Navbar />
-
-      <Container sx={{ py: 12 }}>
+    <Box sx={{ py: 12 }}>
+      <Container>
         <Typography variant="h3" sx={{ fontWeight: "bold", color: "white", mb: 6, textAlign: "center" }}>
           💉 Calendário de Vacinação
         </Typography>
@@ -80,8 +68,6 @@ export default function Calendario() {
           </Typography>
         </Paper>
       </Container>
-
-      <Footer />
     </Box>
   );
 }

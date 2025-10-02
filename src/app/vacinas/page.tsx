@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container, Typography, Grid, Card, CardContent, Stack } from "@mui/material";
+import { Box, Container, Typography, Card, CardContent, Stack } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 
 const vacinas = [
@@ -15,27 +15,45 @@ export default function Vacinas() {
   return (
     <Box sx={{ py: 12, backgroundColor: "#7c3aed" }}>
       <Container>
-        <Typography variant="h3" sx={{ fontWeight: 900, color: "white", mb: 6, textAlign: "center" }}>
+        <Typography
+          variant="h3"
+          sx={{ fontWeight: 900, color: "white", mb: 6, textAlign: "center" }}
+        >
           💉 Vacinas Disponíveis
         </Typography>
 
-        <Grid container spacing={4}>
+        <Stack
+          direction="row"
+          spacing={4}
+          flexWrap="wrap"
+          justifyContent="center"
+        >
           {vacinas.map((vacina, index) => (
-            <Grid item xs={12} md={4} key={index}>
-              <Card sx={{ borderRadius: 3, boxShadow: 6 }}>
-                <CardContent>
-                  <Stack direction="row" spacing={2} alignItems="center">
-                    <CheckCircle color="primary" />
-                    <Stack>
-                      <Typography variant="body1" fontWeight={600}>{vacina.nome}</Typography>
-                      <Typography variant="body2" color="text.secondary">{vacina.publico}</Typography>
-                    </Stack>
+            <Card
+              key={index}
+              sx={{
+                borderRadius: 3,
+                boxShadow: 6,
+                width: { xs: "100%", md: "30%" },
+                mb: 4,
+              }}
+            >
+              <CardContent>
+                <Stack direction="row" spacing={2} alignItems="center">
+                  <CheckCircle color="primary" />
+                  <Stack>
+                    <Typography variant="body1" fontWeight={600}>
+                      {vacina.nome}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {vacina.publico}
+                    </Typography>
                   </Stack>
-                </CardContent>
-              </Card>
-            </Grid>
+                </Stack>
+              </CardContent>
+            </Card>
           ))}
-        </Grid>
+        </Stack>
       </Container>
     </Box>
   );

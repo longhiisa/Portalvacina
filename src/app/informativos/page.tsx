@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container, Typography, Grid, Card, CardContent } from "@mui/material";
+import { Box, Container, Typography, Card, CardContent, Stack } from "@mui/material";
 
 const informativos = [
   {
@@ -28,22 +28,39 @@ export default function Informativos() {
           📚 Informativos sobre Vacinação
         </Typography>
 
-        <Grid container spacing={4}>
+        <Stack
+          direction="row"
+          spacing={4}
+          flexWrap="wrap"
+          justifyContent="center"
+        >
           {informativos.map((info, index) => (
-            <Grid item xs={12} md={4} key={index}>
-              <Card sx={{ borderRadius: 3, boxShadow: 6, height: "100%" }}>
-                <CardContent>
-                  <Typography variant="h6" fontWeight={700} mb={2} color="primary.main">
-                    {info.titulo}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {info.descricao}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
+            <Card
+              key={index}
+              sx={{
+                borderRadius: 3,
+                boxShadow: 6,
+                width: { xs: "100%", md: "30%" }, // responsivo
+                mb: 4,
+                height: "100%",
+              }}
+            >
+              <CardContent>
+                <Typography
+                  variant="h6"
+                  fontWeight={700}
+                  mb={2}
+                  color="primary.main"
+                >
+                  {info.titulo}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {info.descricao}
+                </Typography>
+              </CardContent>
+            </Card>
           ))}
-        </Grid>
+        </Stack>
       </Container>
     </Box>
   );

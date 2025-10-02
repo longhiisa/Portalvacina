@@ -24,9 +24,9 @@ export default function Vacinas() {
 
         <Stack
           direction="row"
-          spacing={4}
           flexWrap="wrap"
           justifyContent="center"
+          gap={4} // ✅ distância entre os cards
         >
           {vacinas.map((vacina, index) => (
             <Card
@@ -35,7 +35,6 @@ export default function Vacinas() {
                 borderRadius: 3,
                 boxShadow: 6,
                 width: { xs: "100%", md: "30%" },
-                mb: 4,
               }}
             >
               <CardContent>

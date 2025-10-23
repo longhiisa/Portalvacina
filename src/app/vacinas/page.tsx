@@ -47,40 +47,48 @@ export default function VacinasPage() {
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#f9fafb' }}>
       {/* Hero Section */}
-      <section className="gradient-hero" style={{ color: 'white', padding: '4rem 0' }}>
-        <div className="container text-center">
-          <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', marginBottom: '1rem' }}>
+      <section
+        className="w-full py-16 text-center"
+        style={{
+          background: "linear-gradient(90deg, #2563eb 0%, #1e40af 100%)", // azul degradê
+          color: "white",
+          borderRadius: '1rem',
+          height: '150px',
+          display: 'flex',
+          justifyContent: 'center',
+          marginTop: '2rem',
+          padding: 'auto',
+        }}
+      >
+        <div className="max-w-3xl mx-auto px-4">
+          <h1
+            style={{
+              fontSize: "clamp(2rem, 5vw, 3rem)",
+              marginBottom: "1rem",
+              fontWeight: "700",
+            }}
+          >
             💉 Tipos de Vacinas
           </h1>
-          <p style={{ fontSize: '1.25rem', maxWidth: '48rem', margin: '0 auto' }}>
+
+          <p
+            style={{
+              fontSize: "1.25rem",
+              color: "#e0f2fe", // azul-claro suave que contrasta bem
+            }}
+          >
             Conheça as principais vacinas disponíveis no programa nacional de imunização
           </p>
         </div>
       </section>
 
-      {/* Search Bar */}
-      <section className="container" style={{ marginTop: '2rem', marginBottom: '3rem' }}>
-        <div style={{ maxWidth: '40rem', margin: '0 auto' }}>
-          <input 
-            type="text" 
-            placeholder="🔍 Buscar vacina..." 
-            style={{ 
-              padding: '1rem 1.5rem',
-              fontSize: '1rem',
-              borderRadius: '0.5rem',
-              border: '2px solid #e5e7eb',
-              width: '100%'
-            }}
-          />
-        </div>
-      </section>
 
       {/* Vaccines Grid */}
       <section className="container py-20">
         <div className="grid grid-cols-3" style={{ gap: '2rem' }}>
           {vaccines.map((vaccine, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="card hover-lift"
               style={{ borderTop: `4px solid ${vaccine.color}` }}
             >
@@ -99,8 +107,8 @@ export default function VacinasPage() {
               </div>
               <h3 className="text-xl font-bold mb-2">{vaccine.name}</h3>
               <p className="text-gray-600 mb-4">{vaccine.description}</p>
-              <div style={{ 
-                borderTop: '1px solid #e5e7eb', 
+              <div style={{
+                borderTop: '1px solid #e5e7eb',
                 paddingTop: '1rem',
                 display: 'flex',
                 flexDirection: 'column',
@@ -113,8 +121,8 @@ export default function VacinasPage() {
                   <strong>Doses:</strong> {vaccine.doses}
                 </div>
               </div>
-              <button 
-                className="btn-primary" 
+              <button
+                className="btn-primary"
                 style={{ marginTop: '1rem', width: '100%' }}
               >
                 Agendar

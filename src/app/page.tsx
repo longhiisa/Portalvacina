@@ -2,29 +2,107 @@
 
 export default function Home() {
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom, #eff6ff, #ffffff)' }}>
+    <div style={{ minHeight: '100vh', background: 'white' }}>
       {/* Hero Section */}
-      <section className="gradient-hero" style={{ position: 'relative', overflow: 'visible', color: 'white' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundColor: 'black', opacity: 0.1 }}></div>
-        <div className="container" style={{ position: 'relative', padding: '6rem 1rem' }}>
+      <section
+        className="gradient-hero"
+        style={{
+          position: "relative",
+          overflow: "visible",
+          color: "white",
+          marginTop: "5rem", // 👈 espaço entre Navbar e faixa
+          borderRadius: "1rem",
+        }}
+      >
+        {/* camada de escurecimento suave */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundColor: "black",
+            opacity: 0.15,
+          }}
+        ></div>
+
+        <div
+          className="container"
+          style={{
+            position: "relative",
+            padding: "4rem 1rem", // 👈 altura reduzida (antes era 6rem)
+            maxWidth: "960px", // 👈 limita largura para ficar mais proporcional
+            margin: "0 auto",
+          }}
+        >
           <div className="text-center">
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.5rem' }}>
-              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            {/* Ícone */}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginBottom: "1rem",
+              }}
+            >
+              <svg
+                width="70"
+                height="70"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
             </div>
-            <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.75rem)', marginBottom: '1.5rem' }}>
+
+            {/* Título */}
+            <h1
+              style={{
+                fontSize: "clamp(2rem, 4vw, 3rem)",
+                marginBottom: "1rem",
+                fontWeight: 700,
+              }}
+            >
               Portal de Vacinação
             </h1>
-            <p style={{ fontSize: 'clamp(1.125rem, 3vw, 1.5rem)', marginBottom: '2rem', maxWidth: '48rem', margin: '0 auto 2rem' }}>
-              A vacinação é a forma mais eficaz de proteger você e toda a comunidade contra doenças graves.
-              Informe-se e mantenha sua carteira de vacinação em dia.
+
+            {/* Parágrafo */}
+            <p
+              style={{
+                fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
+                marginBottom: "1.5rem",
+                maxWidth: "42rem",
+                margin: "0 auto 1.5rem",
+                color: "white"
+              }}
+            >
+              A vacinação é a forma mais eficaz de proteger você e toda a comunidade
+              contra doenças graves. Informe-se e mantenha sua carteira de vacinação
+              em dia.
             </p>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-              <button className="btn-primary" style={{ fontSize: '1.125rem', padding: '1rem 2rem' }}>
+
+            {/* Botões */}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: "1rem",
+                flexWrap: "wrap",
+              }}
+            >
+              <button
+                className="btn-primary"
+                style={{ fontSize: "1.125rem", padding: "0.875rem 1.75rem" }}
+              >
                 📅 Agendar Vacinação
               </button>
-              <button className="btn-primary" style={{ fontSize: '1.125rem', padding: '1rem 2rem', backgroundColor: 'rgb(59, 130, 246)' }}>
+              <button
+                className="btn-primary"
+                style={{
+                  fontSize: "1.125rem",
+                  padding: "0.875rem 1.75rem",
+                  backgroundColor: "rgb(59, 130, 246)",
+                }}
+              >
                 📍 Encontrar Posto
               </button>
             </div>
@@ -32,8 +110,9 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Stats Section */}
-      <section className="container" style={{ marginTop: '-3rem', paddingBottom: '5rem', position: 'relative', zIndex: 10 }}>
+      <section className="container" style={{ marginTop: '1rem', paddingBottom: '5rem', position: 'relative', zIndex: 10 }}>
         <div className="grid grid-cols-3 gap-6">
 
           {/* Pessoas Vacinadas */}
@@ -263,19 +342,20 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="gradient-hero" style={{ color: 'white', padding: '5rem 0' }}>
+      <section className="gradient-hero" style={{ color: 'white', padding: '5rem 0', borderRadius: '1rem' }}>
         <div className="container text-center" style={{ maxWidth: '64rem' }}>
           <h2 className="text-4xl font-bold mb-6">
             Sua saúde em primeiro lugar
           </h2>
-          <p className="text-xl mb-8">
+          <p className="text-xl mb-8" style={{color: 'white'}}>
             Não espere! Mantenha sua carteira de vacinação em dia e proteja quem você ama.
           </p>
           <button className="btn-primary" style={{
             padding: '1rem 2.5rem',
             fontSize: '1.125rem',
             fontWeight: 'bold',
-            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3)'
+            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3)',
+            
           }}>
             Agendar Minha Vacinação Agora
           </button>
